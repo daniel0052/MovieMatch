@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieMatch</title>
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/styles/main.min.css">
+</head>
+<body>
+  
+  <header class="header">
+    <img src="./src/assets/img/mm.png" alt="Nome MovieMatch">
+    <p>Escolha o gênero. Nós encontramos o filme.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container-options">
+          <form id="form">
+            <input id="apiKey" type="password" placeholder="API Key Gemini">
+            
+            <select id="selectedGenre">
+              <option value="">Selecione o gênero</option>
+              <option value="terror">Terror</option>
+              <option value="acao">Ação</option>
+              <option value="comedia">Comédia</option>
+              <option value="drama">Drama</option>
+              <option value="romance">Romance</option>
+              <option value="suspense">Suspense</option>
+              <option value="Ficcao-cientifica">Ficção científica</option>
+            </select>
+
+            <select id="streamingPlatform">
+              <option value="">Selecione a plataforma de Streaming</option>
+              <option value="netflix">Netflix</option>
+              <option value="hbo">HBO Max</option>
+              <option value="prime-video">Prime Video</option>
+              <option value="disney-plus">Disney Plus</option>
+              <option value="globoplay">Globoplay</option>
+              <option value="paramout+">Paramout+</option>
+              <option value="star-plus">Star Plus</option>
+              <option value="crunchyroll">Crunchyroll</option>
+            </select>
+          
+          <button id="search" class="button">Procurar</button>
+        </form>
+      </div>
+
+      <div id="aiResponse" class="hidden"> 
+        <span class="dec"></span> 
+        <div class="response-content">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+</html>
