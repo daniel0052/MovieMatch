@@ -75,7 +75,6 @@ Paul Atreides, um jovem brilhante e talentoso, deve viajar para o planeta mais p
   });
 
   const data = await response.json();
-  console.log({data});
   return data.candidates[0].content.parts[0].text;
 }
 
